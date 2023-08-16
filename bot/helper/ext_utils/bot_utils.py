@@ -41,16 +41,16 @@ class MirrorStatus:
         STATUS_CHECKING = "📝 CheckUp"
         STATUS_SEEDING = "🌧 Seed"
     else:
-        STATUS_UPLOADING = "Upload"
-        STATUS_DOWNLOADING = "Download"
-        STATUS_CLONING = "Clone"
-        STATUS_WAITING = "Queue"
-        STATUS_PAUSED = "Pause"
-        STATUS_ARCHIVING = "Archive"
-        STATUS_EXTRACTING = "Extract"
-        STATUS_SPLITTING = "Split"
-        STATUS_CHECKING = "CheckUp"
-        STATUS_SEEDING = "Seed"
+        STATUS_UPLOADING = "𝕌𝕡𝕝𝕠𝕒𝕕"
+        STATUS_DOWNLOADING = "𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕"
+        STATUS_CLONING = "ℂ𝕝𝕠𝕟𝕖"
+        STATUS_WAITING = "ℚ𝕦𝕖𝕦𝕖"
+        STATUS_PAUSED = "ℙ𝕒𝕦𝕤𝕖"
+        STATUS_ARCHIVING = "𝔸𝕣𝕔𝕙𝕚𝕧𝕖"
+        STATUS_EXTRACTING = "𝔼𝕩𝕥𝕣𝕒𝕔𝕥"
+        STATUS_SPLITTING = "𝕊𝕡𝕝𝕚𝕥"
+        STATUS_CHECKING = "ℂ𝕙𝕖𝕔𝕜𝕌𝕡"
+        STATUS_SEEDING = "𝕊𝕖𝕖𝕕"
 
 class EngineStatus:
     STATUS_ARIA = "Aria2c📶"
@@ -126,11 +126,11 @@ def bt_selection_buttons(id_: str):
 
     buttons = ButtonMaker()
     if WEB_PINCODE:
-        buttons.buildbutton("Select Files", f"{BASE_URL}/app/files/{id_}")
-        buttons.sbutton("Pincode", f"btsel pin {gid} {pincode}")
+        buttons.buildbutton("𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞𝐬", f"{BASE_URL}/app/files/{id_}")
+        buttons.sbutton("𝐏𝐢𝐧𝐜𝐨𝐝𝐞", f"btsel pin {gid} {pincode}")
     else:
-        buttons.buildbutton("Select Files", f"{BASE_URL}/app/files/{id_}?pin_code={pincode}")
-    buttons.sbutton("Done Selecting", f"btsel done {gid} {id_}")
+        buttons.buildbutton("𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞𝐬", f"{BASE_URL}/app/files/{id_}?pin_code={pincode}")
+    buttons.sbutton("𝐃𝐨𝐧𝐞 𝐒𝐞𝐥𝐞𝐜𝐭𝐢𝐧𝐠", f"btsel done {gid} {id_}")
     return buttons.build_menu(2)
 
 
@@ -168,7 +168,7 @@ def get_progress_bar_string(status):
 
 def get_readable_message():
     with download_dict_lock:
-        msg = f""
+        msg = f'<a href="https://t.me/Cloud_station9"><b>Powered By CLOUD STATION</b></a>\n\n'
         if STATUS_LIMIT is not None:
             tasks = len(download_dict)
             global pages
